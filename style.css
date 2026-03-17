@@ -1,0 +1,104 @@
+body {
+    background-color: #fff0f3; /* Light Pink */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    text-align: center;
+    max-width: 400px;
+    padding: 20px;
+}
+
+h1 { color: #ff4d6d; min-height: 1.2em; }
+h2 { color: #590d22; margin-bottom: 30px; }
+
+.polaroid {
+    background: white;
+    padding: 10px 10px 20px 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transform: rotate(-3deg);
+    margin-bottom: 40px;
+    transition: transform 0.3s;
+}
+
+.polaroid:hover { transform: rotate(0deg) scale(1.02); }
+
+.polaroid img { width: 100%; border: 1px solid #eee; }
+
+.polaroid p {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 1.6rem;
+    margin: 15px 0 0 0;
+    color: #333;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    height: 100px;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+#yesBtn { background-color: #ff4d6d; color: white; box-shadow: 0 4px 15px rgba(255, 77, 109, 0.3); }
+
+#noBtn { 
+    background-color: #ced4da; 
+    color: #495057; 
+    position: absolute; /* Essential for the moving logic */
+}
+
+/* Secret Message Styles */
+.letter {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-left: 6px solid #ff4d6d;
+    text-align: left;
+    margin-top: 20px;
+    animation: slideUp 0.8s ease-out;
+}
+
+#secret-text { font-style: italic; color: #444; line-height: 1.5; }
+
+textarea {
+    width: 100%;
+    height: 70px;
+    margin-top: 10px;
+    border: 1px dashed #ff4d6d;
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#sendBtn {
+    margin-top: 15px;
+    width: 100%;
+    background-color: #ff758f;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.hidden { display: none; }
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}

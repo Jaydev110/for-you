@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Surprise ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <audio id="bgMusic" loop>
+        <source src="paulyudin-romantic-dreams-155789.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <header>
+            <h1 id="typing-text"></h1>
+        </header>
+
+        <section class="gallery">
+            <div class="polaroid">
+                <img src="Untitled design.jpg" alt="Our Memory">
+                <p>Moments with you... ✨</p>
+            </div>
+        </section>
+
+        <section class="question-box" id="main-box">
+            <h2>Will you go on a date with me?</h2>
+            <div class="buttons">
+                <button id="yesBtn">Haan Ji! ❤️</button>
+                <button id="noBtn">Nahi ❌</button>
+            </div>
+        </section>
+
+        <section id="success-msg" class="hidden">
+            <h1>Yayyyy! 🎉</h1>
+            
+            <div class="letter">
+                <h3>A Note For You 💌</h3>
+                <p id="secret-text">
+                    I've been thinking about this for a while... 
+                    You make my world a whole lot brighter. 
+                    I can't wait to spend some quality time with you!
+                </p>
+                <hr>
+                <p style="font-size: 0.8rem; color: #888;">Leave a reply for me:</p>
+                <textarea id="replyBox" placeholder="Tell me what's on your mind..."></textarea>
+                <button id="sendBtn">Send to My Heart</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
